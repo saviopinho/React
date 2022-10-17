@@ -1,13 +1,16 @@
 {
-  "name": "react",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+    "name": "react",
+    "private": true,
+    "workspaces": {
+        "packages": [
+            "Geral",
+            "Udemy"
+        ]
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Savio Pinho <saviopinhonunes@gmail.com>",
+    "license": "ISC",
+    "dependencies": {}
 }
