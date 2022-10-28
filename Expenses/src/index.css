@@ -5,10 +5,10 @@
 }
 
 html {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 body {
     margin: 0;
-    background-color: #d2d2d9;
+    background-color: #3f3f3f;
 }
