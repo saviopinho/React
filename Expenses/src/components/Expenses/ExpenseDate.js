@@ -1,8 +1,14 @@
 import './ExpenseDate.css';
 
 const ExpenseDate = ({ date }) => {
-    const day = date.toLocaleString('pt-BR', { day: '2-digit' });
-    const month = date.toLocaleString('pt-BR', { month: 'long' });
+    const day = date.toLocaleString('pt-BR', {
+        day: '2-digit',
+        timeZone: 'UTC',
+    });
+    const month = date.toLocaleString('pt-BR', {
+        month: 'long',
+        timeZone: 'UTC',
+    });
     const year = date.getFullYear();
 
     return (
