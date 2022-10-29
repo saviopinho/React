@@ -2,8 +2,17 @@ import { useState } from 'react';
 import Expenses from './components/Expenses/Expenses';
 import NewExpense from './components/NewExpense/NewExpense';
 
+const DUMMY_EXPENSES = [
+    {
+        id: 'e1',
+        title: 'CAR EXPENSE',
+        amount: 123.89,
+        date: new Date('10/15/2022'),
+    },
+];
+
 const App = () => {
-    const [expenses, setExpenses] = useState([]);
+    const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
 
     const addExpenseHandler = expense => {
         console.log('In App.js');
