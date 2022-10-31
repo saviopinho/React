@@ -1,15 +1,10 @@
 import './ExpenseDate.css';
 
-const ExpenseDate = ({ date }) => {
-    const day = date.toLocaleString('pt-BR', {
-        day: '2-digit',
-        timeZone: 'UTC',
-    });
-    const month = date.toLocaleString('pt-BR', {
-        month: 'long',
-        timeZone: 'UTC',
-    });
-    const year = date.getFullYear();
+const ExpenseDate = props => {
+    const { date } = props;
+    const day = date.format('DD');
+    const month = date.format('MMMM');
+    const year = date.format('YYYY');
 
     return (
         <div className="expense-date">

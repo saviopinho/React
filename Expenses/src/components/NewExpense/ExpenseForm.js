@@ -1,6 +1,7 @@
 import { useState } from 'react';
-
 import './ExpenseForm.css';
+
+const moment = require('moment');
 
 const ExpenseForm = ({ onSaveExpenseData, onCancel }) => {
     const [inputTitle, setInputTitle] = useState('');
@@ -22,10 +23,12 @@ const ExpenseForm = ({ onSaveExpenseData, onCancel }) => {
     const submitHandler = event => {
         event.preventDefault();
 
+        console.log('inputDate:', inputDate);
+
         const expenseData = {
             title: inputTitle,
-            amount: inputAmount,
-            date: new Date(inputDate),
+            amount: +inputAmount,
+            date: moment(inputDate),
         };
 
         onSaveExpenseData(expenseData);
@@ -60,8 +63,8 @@ const ExpenseForm = ({ onSaveExpenseData, onCancel }) => {
                     <label>Date</label>
                     <input
                         type="date"
-                        min="01-01-2019"
-                        max="31-12-2022"
+                        min="2019-01-01"
+                        max="2022-12-31"
                         value={inputDate}
                         onChange={dateChangeHandler}
                     />

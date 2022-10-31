@@ -2,12 +2,14 @@ import { useState } from 'react';
 import Expenses from './components/Expenses/Expenses';
 import NewExpense from './components/NewExpense/NewExpense';
 
+const moment = require('moment');
+
 const DUMMY_EXPENSES = [
     {
         id: 'e1',
         title: 'CAR EXPENSE',
         amount: 123.89,
-        date: new Date('10/15/2022'),
+        date: moment('2022-05-15'),
     },
 ];
 
