@@ -16,8 +16,6 @@ function Expenses(props) {
     const filtered = items.filter(expense => {
         const year = expense.date.year().toString();
 
-        console.log('selectedYear:', selectedYear);
-
         if (selectedYear === '-1') {
             return !year.includes(selectedYear);
         }

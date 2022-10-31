@@ -23,8 +23,6 @@ const ExpenseForm = ({ onSaveExpenseData, onCancel }) => {
     const submitHandler = event => {
         event.preventDefault();
 
-        console.log('inputDate:', inputDate);
-
         const expenseData = {
             title: inputTitle,
             amount: +inputAmount,

@@ -18,10 +18,7 @@ function ExpensesChart(props) {
 
     for (const expense of props.expenses) {
         const expenseMonth = expense.date.month();
-        console.log('expense.amount:', expense.amount);
-        chartDataPoints[expenseMonth].value += parseFloat(
-            expense.amount
-        ).toFixed(2);
+        chartDataPoints[expenseMonth].value += expense.amount;
     }
 
     return <Chart dataPoints={chartDataPoints} />;
